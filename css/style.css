@@ -3,7 +3,7 @@
     --yellow : #f9ca24
 
 }
-
+/* full page */
 *{
     font-family: 'Nunito', sans-serif;
     margin:0;
@@ -19,6 +19,7 @@
     background: var(--yellow);
     color: #333;
 }
+/* Scroller */
 html{
     font-size: 62.5%;
     overflow-x: hidden;
@@ -32,17 +33,16 @@ html::-webkit-scrollbar-track{
 html::-webkit-scrollbar-thumb{
     background:var(--yellow);
 }
+/* body */
 body{
     background: #111;
     overflow-x: hidden;
     padding-left: 37rem;
 }
-
 section{
     min-height: 100vh;
     padding: 1rem;
 }
-
 .btn{
     
     padding: .7rem 3rem;
@@ -60,7 +60,7 @@ section{
 .btn:hover{
     background: var(--yellow);
 }
-
+/* header */
 .heading{
     text-align: center;
     margin: 0  6rem;
@@ -72,7 +72,6 @@ section{
 .heading span{
     color: var(--yellow);
 }
-
 header{
     position:fixed;
     top: 0;
@@ -123,12 +122,12 @@ header .navbar ul li a:hover{
 
     background: var(--yellow);
 }
-
 header .follow a{
     color: #fff;
     margin:0 .7rem;
     font-size: 3rem;
 }
+/* menu-bar */
 #menu{
     position: fixed;
     top: 2rem; right: 2rem;
@@ -140,20 +139,17 @@ header .follow a{
     z-index:1000;
     display: none;
 }
-
-
+/* home page */
 .home{
     display: flex;
     justify-content: center;
     flex-flow: column;
     padding: 0 5rem;
 }
-
 .home h3{
     font-size: 2.5rem;
     color: #fff;
 }
-
 .home h1{
     font-size: 5rem;
     color: #fff;
@@ -167,7 +163,7 @@ header .follow a{
     color: #eee;
     padding: 1rem 0;
 }
-
+/* about page  */
 .about .row{
     display: flex;
     align-items: center;
@@ -216,8 +212,7 @@ header .follow a{
     font-size: 2rem;
     color: #fff;
 }
-
-
+/* education page  */
 .education .box-container{
     display: flex;
     align-items: center;
@@ -262,33 +257,44 @@ header .follow a{
     color:#fff;
     background: var(--yellow);   
     }
-
-.portfolio .box-container{
+/* area of interest page  */
+.areaofinterest .box-container{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     padding: 2rem 0;
 }
-.portfolio .box-container .box{
+.areaofinterest .box-container .box{
     height: 15rem;
     width: 20rem;
     border-radius: 1rem;
     margin: 2rem;
+    position: relative;
     overflow: hidden;
-    cursor: pointer;
+    background: #fff;
+    
 }
-.portfolio .box-container .box img{
+.areaofinterest .box-container .box img{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    position: relative;
+    z-index: 1; 
 }
-.portfolio .box-container .box:hover img{
-    transform: scale(1.2);
+.areaofinterest .box-container .box:hover img{
+    height: 75%;
+    width: 75%;
 }
-
-.contact .row
-{
+.areaofinterest .box-container .box h3{
+    position: absolute;
+    bottom: .5rem; left:1rem;
+    font-size: 2.5rem;
+    color: black;
+    text-transform: uppercase;   
+}
+/* Contact page  */
+.contact .row{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -339,10 +345,6 @@ header .follow a{
     padding-right: 1rem;
     color: var(--yellow);
 }
-
-
-
-
 /* media quries */
 @media(max-width:1200px){
     html{
@@ -389,6 +391,6 @@ header .follow a{
         margin: 3rem 0;
     }
     .portfolio .box-container .box{
-        width: 100%;
-    }
+        width:100%;
+}
 }
